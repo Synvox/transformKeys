@@ -1,0 +1,33 @@
+{
+  "name": "transformkeys",
+  "version": "0.1.0",
+  "description": "Transforms object properties to another case.",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm t && npm run compile",
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/synvox/transformKeys"
+  },
+  "keywords": [
+    "Object",
+    "Keys",
+    "Case",
+    "Transform"
+  ],
+  "author": "Ryan Allred",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "babel": "^6.23.0",
+    "babel-register": "^6.24.1"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  }
+}
