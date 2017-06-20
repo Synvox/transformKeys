@@ -1,5 +1,6 @@
 # Transform Keys
-Transform keys is a pure function that changes object keys to the case you specify.
+![travis-cli](https://api.travis-ci.org/Synvox/transformKeys.svg?branch=master)  
+Transform keys is a pure function that changes object keys to the case you specify.  
 
 ## Installation
 
