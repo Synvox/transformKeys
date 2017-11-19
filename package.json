@@ -1,6 +1,6 @@
 {
   "name": "transformkeys",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Transforms object properties to another case.",
   "main": "lib/index.js",
   "scripts": {
