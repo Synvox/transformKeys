@@ -29,6 +29,7 @@ const transformKeys = (obj, method='camel')=>{
     method = methods[method]
 
   if (typeof obj !== 'object') return obj
+  if (!obj) return obj
   if (Array.isArray(obj)) return obj.map(item=>transformKeys(item, method))
 
   return Object.keys(obj)
@@ -44,7 +45,7 @@ const transformKeys = (obj, method='camel')=>{
         .split(' ')
         .reduce((str, word, index)=>
           str + method(word, index)
-        , '')
+        , key.startsWith('_') ? '_' : '')
     }))
     .reduce((returned, {key, value})=>Object.assign(returned, {[key]: value}), {})
 }

@@ -84,3 +84,23 @@ test('with nested array', t=>t.deepEqual(transformKeys({
     {ind: 2}
   ]
 }))
+
+test('with _ prefix', t=>t.deepEqual(transformKeys({
+  _id: '123',
+  _rev: 'abc'
+}, 'pascal'),{
+  _Id: '123',
+  _Rev: 'abc'
+}))
+
+test('with null', t => t.deepEqual(transformKeys({
+  prop_name: null
+}), {
+  propName: null
+}))
+
+test('with undefined', t => t.deepEqual(transformKeys({
+  prop_name: undefined
+}), {
+  propName: undefined
+}))
